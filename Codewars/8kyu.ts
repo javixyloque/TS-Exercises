@@ -11,10 +11,10 @@ export function bmi(weight: number, height: number): string {
    }
 }
 
-console.log("Resultados tests función bmi")
-console.log(bmi(-40,1.80));
-console.log(bmi(100, 1.80));
-console.log("--------------\n\n");
+// console.log("Resultados tests función bmi")
+// console.log(bmi(-40,1.80));
+// console.log(bmi(100, 1.80));
+// console.log("--------------\n\n");
 
 export function jumbler(indices: number[]): number {
     var contador = 0;
@@ -35,4 +35,25 @@ export function jumbler(indices: number[]): number {
 }
 
 
-console.log(jumbler([3,2,0,1]));
+// console.log(jumbler([3,2,0,1]));
+
+export class Kata {
+     static getCount(str: string): number {
+          let vowels = ['a','e','i','o','u']
+          
+          let temp = str.split('');
+          let counter = 0;
+          temp.forEach(letter => {
+               vowels.forEach(vo=> {
+                    if (vo == letter) {
+                         counter++
+                         return;
+                    } 
+               });
+
+          });
+          return counter;
+     }
+}
+
+console.log (Kata.getCount('Hola'));
